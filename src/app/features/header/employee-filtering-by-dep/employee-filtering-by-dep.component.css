@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&family=Press+Start+2P&family=Sedan+SC&display=swap');
+.custom-font {
+  font-family: "Sedan SC", serif;
+}
+::ng-deep body {
+  background-color: lightgrey !important;
+}
+:host table {
+  background-color: grey;
+}
+:host table th {
+  background-color: lightgrey;
+}
+:host table td {
+  background-color: lightgrey;
+}

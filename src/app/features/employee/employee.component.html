@@ -1,0 +1,15 @@
+<div class="row ">
+
+  <div class="col-md-7">
+    <app-employee-list
+      (employeeWasSelected)="navigateToDetails($event)"
+    ></app-employee-list>
+  </div>
+  <div class="col-md-5">
+    <app-employee-detail
+    *ngIf="employee; else noEmployeeSelected"
+    [employeeCh]="employee"></app-employee-detail>
+    <ng-template #noEmployeeSelected>
+    </ng-template>
+  </div>
+</div>

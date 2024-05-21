@@ -1,0 +1,71 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark custom-font">
+  <div class="container-fluid">
+    <a class="navbar-brand" (click)="navigatetoEmployee()" style="cursor: pointer">
+
+      <img src="assets/images/navbarlogo.png" alt="HR Management Logo" class="me-2" style="height: 30px;">HR Management
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item" *ngIf="loginService.isAuthenticated()">
+          <a class="nav-link active" aria-current="page" id="createemployee" (click)="clicked=!clicked">New Employee</a>
+        </li>
+
+        <li class="nav-item dropdown" *ngIf="loginService.isAuthenticated()">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Department
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" (click)="navigateToDepartment(1)">Informatics</a></li>
+            <li><a class="dropdown-item" (click)="navigateToDepartment(2)">Finance</a></li>
+            <li><a class="dropdown-item" (click)="navigateToDepartment(3)">Marketing</a></li>
+
+          </ul>
+        </li>
+
+
+      </ul>
+      <ul class="navbar-nav  " >
+      <li class=" nav-item " >
+        <a class="nav-link active" aria-current="page" id="a1bout"  data-bs-toggle="modal" data-bs-target="#exampleModal" style="cursor: pointer">About</a>
+      </li>
+      </ul>
+      <form class="d-flex">
+        <button class="btn btn-outline-danger" type="button" (click)="Logout()">Logout</button>
+      </form>
+    </div>
+  </div>
+
+</nav>
+
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">About project</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        The HRMS project is built using a modern tech stack,
+        including Angular for the front end, Python and Django for the back end,
+        and dbsqlite3 for the database. This combination ensures
+         a  system that can adapt to the evolving needs of an organization.
+        <br>
+        I recently completed the
+        Python Fullstack Development course at IKUB Info Academy,
+        which equipped me with the skills to build full-stack
+        applications using modern development frameworks.
+
+
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<app-employee-create *ngIf="clicked ; else notClicked"></app-employee-create>
+<ng-template #notClicked></ng-template>

@@ -1,0 +1,15 @@
+<div class="content">
+  <app-header *ngIf="loginService.isAuthenticated()"></app-header>
+
+  <!-- Dark mode toggle button -->
+<!--  <div class="toggle-container">-->
+<!--    <button (click)="toggleDarkMode()">-->
+<!--      {{ isDarkMode ? 'Switch to Light Mode' : 'Switch to Dark Mode' }}-->
+<!--    </button>-->
+<!--  </div>-->
+
+
+  <router-outlet></router-outlet>
+  <app-footer></app-footer>
+
+</div>

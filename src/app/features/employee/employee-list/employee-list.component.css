@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&family=Press+Start+2P&display=swap');
+
+.custom-font {
+    font-family: 'Poetsen One', sans-serif;
+}
+.full-width-div {
+    width: 100vw;
+}
+::ng-deep body {
+    background-color: #00ff00;
+
+
+}
+:host table {
+    background-color: grey;
+}
+:host table th {
+    background-color: lightgrey;
+}
+:host table td {
+    background-color: lightgrey;
+}
+.highlight{
+    background-color: lightcoral;
+}
+

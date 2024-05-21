@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&family=Press+Start+2P&display=swap');
+
+.custom-font {
+  font-family: 'Poetsen One', sans-serif;
+}
+::ng-deep body {
+  background-color: lightgrey !important;
+}

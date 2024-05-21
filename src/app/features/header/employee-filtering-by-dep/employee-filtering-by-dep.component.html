@@ -1,0 +1,27 @@
+
+<h1 class="text-secondary custom-font" >Punonjesit sipas departamentit : {{employeenumber}} punonjes</h1>
+<table class="table table-hover">
+  <thead class="custom-font">
+  <tr>
+    <th scope="col">Name</th>
+    <th scope="col">Surname</th>
+    <th scope="col">Address</th>
+    <th scope="col">Birthplace</th>
+    <th scope="col">Birthday</th>
+    <th scope="col">Salary</th>
+
+    <th scope="col">Department</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let employee of employees">
+    <td>{{ employee.name }}</td>
+    <td>{{ employee.surname }}</td>
+    <td>{{ employee.address }}</td>
+    <td>{{ employee.birthplace }}</td>
+    <td>{{ employee.birthday }}</td>
+    <td>{{ employee.salary }}</td>
+    <td>{{ employee.department }}</td>
+  </tr>
+  </tbody>
+</table>

@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Poetsen+One&family=Press+Start+2P&display=swap');
+
+#logout,#createemployee{
+  cursor: pointer;
+}
+.dropdown-item{
+  cursor: pointer;
+}
+
+.custom-font {
+  font-family: 'Poetsen One', sans-serif;
+}
+
